@@ -1,2 +1,2 @@
 # rice-language
-created my own programming language!
+Rice the programming language by Dennis King.
