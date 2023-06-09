@@ -1,8 +1,19 @@
 grammar RiceLanguage;
 
 // Lexer rules
-ID: [a-zA-Z]+;
-INT: [0-9]+;
+NUMBER : [0-9]+;
+ADDITION : '+';
+SUBTRACT : '-';
+LETTERS : [a-zA-Z]+; 
 
-// Parser rule
-expression: INT '+' INT;
+// Keywords
+RICE : 'rice';
+COOK : 'cook';
+TASTE : 'taste';
+
+// Parser rules
+expression : term ((ADDITION | SUBTRACT) term)* ;
+term : NUMBER+ ;
+
+// Ignore white spaces
+WS : [ \t\r\n]+ -> skip ;

@@ -1,4 +1,13 @@
-T__0=1
-ID=2
-INT=3
-'+'=1
+NUMBER=1
+ADDITION=2
+SUBTRACT=3
+LETTERS=4
+RICE=5
+COOK=6
+TASTE=7
+WS=8
+'+'=2
+'-'=3
+'rice'=5
+'cook'=6
+'taste'=7
