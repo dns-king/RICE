@@ -1,5 +1,7 @@
 grammar RiceLanguage;
 
+// grammar name should always match the file name
+
 // Lexer rules
 NUMBER : [0-9]+;
 ADDITION : '+';
