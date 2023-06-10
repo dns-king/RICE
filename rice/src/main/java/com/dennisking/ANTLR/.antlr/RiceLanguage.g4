@@ -4,8 +4,7 @@ grammar RiceLanguage;
 
 // Lexer rules
 NUMBER : [0-9]+;
-ADDITION : '+';
-SUBTRACT : '-';
+OPERATOR : '+' | '-';
 LETTERS : [a-zA-Z]+; 
 
 // Keywords
