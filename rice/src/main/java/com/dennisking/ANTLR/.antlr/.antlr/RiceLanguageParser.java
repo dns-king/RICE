@@ -16,8 +16,8 @@ public class RiceLanguageParser extends Parser {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		NUMBER=1, ADDITION=2, SUBTRACT=3, LETTERS=4, RICE=5, COOK=6, TASTE=7, 
-		WS=8;
+		NUMBER=1, OPERATOR=2, LETTERS=3, RICE=4, COOK=5, TASTE=6, WS=7, ADDITION=8, 
+		SUBTRACT=9;
 	public static final int
 		RULE_expression = 0, RULE_term = 1;
 	private static String[] makeRuleNames() {
@@ -29,14 +29,14 @@ public class RiceLanguageParser extends Parser {
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, null, "'+'", "'-'", null, "'rice'", "'cook'", "'taste'"
+			null, null, null, null, "'rice'", "'cook'", "'taste'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, "NUMBER", "ADDITION", "SUBTRACT", "LETTERS", "RICE", "COOK", "TASTE", 
-			"WS"
+			null, "NUMBER", "OPERATOR", "LETTERS", "RICE", "COOK", "TASTE", "WS", 
+			"ADDITION", "SUBTRACT"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -203,9 +203,9 @@ public class RiceLanguageParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\n\24\4\2\t\2\4\3"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\13\24\4\2\t\2\4\3"+
 		"\t\3\3\2\3\2\3\2\7\2\n\n\2\f\2\16\2\r\13\2\3\3\6\3\20\n\3\r\3\16\3\21"+
-		"\3\3\2\2\4\2\4\2\3\3\2\4\5\2\23\2\6\3\2\2\2\4\17\3\2\2\2\6\13\5\4\3\2"+
+		"\3\3\2\2\4\2\4\2\3\3\2\n\13\2\23\2\6\3\2\2\2\4\17\3\2\2\2\6\13\5\4\3\2"+
 		"\7\b\t\2\2\2\b\n\5\4\3\2\t\7\3\2\2\2\n\r\3\2\2\2\13\t\3\2\2\2\13\f\3\2"+
 		"\2\2\f\3\3\2\2\2\r\13\3\2\2\2\16\20\7\3\2\2\17\16\3\2\2\2\20\21\3\2\2"+
 		"\2\21\17\3\2\2\2\21\22\3\2\2\2\22\5\3\2\2\2\4\13\21";

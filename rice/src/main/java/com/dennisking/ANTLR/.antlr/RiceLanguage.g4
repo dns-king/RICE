@@ -13,8 +13,6 @@ COOK : 'cook';
 TASTE : 'taste';
 
 // Parser rules
-expression : term ((ADDITION | SUBTRACT) term)* ;
-term : NUMBER+ ;
 
 // Ignore white spaces
 WS : [ \t\r\n]+ -> skip ;
