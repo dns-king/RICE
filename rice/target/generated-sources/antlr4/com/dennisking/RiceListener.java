@@ -8,13 +8,23 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  */
 public interface RiceListener extends ParseTreeListener {
 	/**
-	 * Enter a parse tree produced by {@link RiceParser#start}.
+	 * Enter a parse tree produced by {@link RiceParser#prog}.
 	 * @param ctx the parse tree
 	 */
-	void enterStart(RiceParser.StartContext ctx);
+	void enterProg(RiceParser.ProgContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link RiceParser#start}.
+	 * Exit a parse tree produced by {@link RiceParser#prog}.
 	 * @param ctx the parse tree
 	 */
-	void exitStart(RiceParser.StartContext ctx);
+	void exitProg(RiceParser.ProgContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link RiceParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterExpr(RiceParser.ExprContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link RiceParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitExpr(RiceParser.ExprContext ctx);
 }

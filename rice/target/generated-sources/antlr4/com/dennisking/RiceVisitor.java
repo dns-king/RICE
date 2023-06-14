@@ -11,9 +11,15 @@ import org.antlr.v4.runtime.tree.ParseTreeVisitor;
  */
 public interface RiceVisitor<T> extends ParseTreeVisitor<T> {
 	/**
-	 * Visit a parse tree produced by {@link RiceParser#start}.
+	 * Visit a parse tree produced by {@link RiceParser#prog}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitStart(RiceParser.StartContext ctx);
+	T visitProg(RiceParser.ProgContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link RiceParser#expr}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExpr(RiceParser.ExprContext ctx);
 }

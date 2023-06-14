@@ -16,13 +16,25 @@ public class RiceBaseListener implements RiceListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterStart(RiceParser.StartContext ctx) { }
+	@Override public void enterProg(RiceParser.ProgContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitStart(RiceParser.StartContext ctx) { }
+	@Override public void exitProg(RiceParser.ProgContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterExpr(RiceParser.ExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitExpr(RiceParser.ExprContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

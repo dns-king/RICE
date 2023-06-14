@@ -1,5 +1,4 @@
-// Generated from com/dennisking/Rice.g4 by ANTLR 4.9.2
-package com.dennisking;
+// Generated from /workspaces/rice-language/rice/src/main/antlr4/com/dennisking/Rice.g4 by ANTLR 4.9.2
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
