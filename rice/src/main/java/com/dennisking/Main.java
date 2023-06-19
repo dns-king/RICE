@@ -26,5 +26,6 @@ public class Main {
 
             System.out.println("FINISH: " + file);
         }
+        System.out.println("you did it boy!");
     }
 }
