@@ -11,16 +11,16 @@ public class Main {
     private static final String DIRBASE = "src/test/resources/";
 
     public static void main(String[] args) throws IOException {
-        String files[] = args.length==0? new String[]{ "test." + EXTENSION } : args;
+        String files[] = args.length == 0 ? new String[] { "test." + EXTENSION } : args;
         System.out.println("Dirbase: " + DIRBASE);
-        for (String file : files){
+        for (String file : files) {
             System.out.println("START: " + file);
 
             CharStream in = CharStreams.fromFileName(DIRBASE + file);
             RiceLexer lexer = new RiceLexer(in);
             CommonTokenStream tokens = new CommonTokenStream(lexer);
             RiceParser parser = new RiceParser(tokens);
-            RiceParser.StartContext tree = parser.start();
+            RiceParser.ProgramContext tree = parser.program();
             RiceCustomVisitor visitor = new RiceCustomVisitor();
             visitor.visit(tree);
 
