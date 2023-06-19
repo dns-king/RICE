@@ -600,4 +600,8 @@ public class RiceParser extends Parser {
 			_decisionToDFA[i] = new DFA(_ATN.getDecisionState(i), i);
 		}
 	}
+
+    public ProgramContext start() {
+        return null;
+    }
 }
