@@ -11,7 +11,6 @@ codeBlock: '{' statement* '}';
 statement: variableDeclaration
          | assignmentStatement
          | printStatement
-         | codeSnippet
          ;
 
 variableDeclaration: type Identifier '=' expression ';';
@@ -32,7 +31,7 @@ primaryExpression: Identifier
                 | '(' expression ')'
                 ;
 
-codeSnippet: 'snippet' CodeBlock;
+codeCompletion: dataType Identifier '=';
 
 type: 'int'
     | 'string'
