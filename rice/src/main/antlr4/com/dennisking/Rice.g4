@@ -11,6 +11,7 @@ codeBlock: '{' statement* '}';
 statement: variableDeclaration
          | assignmentStatement
          | printStatement
+         | codeCompletion
          ;
 
 variableDeclaration: type Identifier '=' expression ';';

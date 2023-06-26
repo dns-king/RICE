@@ -79,6 +79,19 @@ public class RiceCustomVisitor extends RiceBaseVisitor<Object> {
         return completions;
     }
 
+    // Example usage
+    @Override
+    public Object visitStatement(RiceParser.StatementContext ctx) {
+        if (ctx.codeCompletion() != null) {
+            List<String> completions = (List<String>) visitCodeCompletion(ctx.codeCompletion());
+            // Use the completions as needed
+            System.out.println("Code completions: " + completions);
+        }
+        // Handle other statement types
+        // ...
+        return null;
+    }
+
     // Implement similar methods for multiplicative expressions, primary
     // expressions, etc.
 
