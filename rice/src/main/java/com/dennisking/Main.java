@@ -3,6 +3,9 @@ package com.dennisking;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
 
+import com.dennisking.RiceCustomVisitor;
+import com.dennisking.RiceParser;
+
 public class Main {
     public static void main(String[] args) {
         // Create an input stream from the Rice program
