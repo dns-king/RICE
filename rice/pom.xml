@@ -15,6 +15,13 @@
 
         <dependency>
             <groupId>org.antlr</groupId>
+            <artifactId>antlr4-annotations</artifactId>
+            <version>4.3</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.antlr</groupId>
             <artifactId>antlr4-tool-testsuite</artifactId>
             <version>4.13.0</version>
         </dependency>
