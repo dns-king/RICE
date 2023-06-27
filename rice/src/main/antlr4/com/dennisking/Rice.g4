@@ -18,7 +18,7 @@ variableDeclaration: type Identifier '=' expression ';';
 
 assignmentStatement: Identifier '=' expression ';';
 
-printStatement: 'print' '(' expression ')' ';';
+printStatement: 'taste' '(' expression ')' ';';
 
 expression: additiveExpression;
 
