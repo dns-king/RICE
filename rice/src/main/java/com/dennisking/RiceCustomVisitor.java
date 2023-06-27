@@ -4,6 +4,8 @@ package com.dennisking;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.antlr.v4.runtime.tree.ParseTree;
+
 
 public class RiceCustomVisitor extends RiceBaseVisitor<Object> {
 
@@ -91,6 +93,9 @@ public class RiceCustomVisitor extends RiceBaseVisitor<Object> {
         // Handle other statement types
         // ...
         return null;
+    }
+
+    public void visit(ParseTree tree) {
     }
 
     // Implement similar methods for multiplicative expressions, primary
