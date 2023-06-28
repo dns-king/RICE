@@ -1,3 +1,0 @@
-var x = "heyy man";
-
-print x;
