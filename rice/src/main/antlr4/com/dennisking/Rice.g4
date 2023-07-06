@@ -1,61 +1,43 @@
 grammar Rice;
 
-// Define the start rule for the language
-start : riceProgram;
+program: riceBlock serveStmt;
 
-// Define a Rice program
-riceProgram : 'Rice' '{' cookCodeBlock '}' 'Serve;';
+riceBlock: 'Rice' cookBlock;
 
-// Define the Cook code block
-cookCodeBlock : 'Cook' '{' riceCodeBlock '}';
+cookBlock: 'Cook' '{' statement* '}';
 
-// Define the rice code block
-riceCodeBlock : statement*;
+statement: declarationStmt | assignmentStmt | printStmt;
 
-// Define a statement
-statement : assignmentStatement
-          | expressionStatement
-          | // Other possible statements
-          ;
+declarationStmt: 'Bowl' ID '=' INT declarationStmtTail?
+              | 'Grain' ID '=' STRING declarationStmtTail?;
 
-// Define an assignment statement
-assignmentStatement : variableName '=' expression ';';
+declarationStmtTail: ',' declarationStmt;
 
-// Define an expression statement
-expressionStatement : expression ';';
+assignmentStmt: ID '=' expr;
 
-// Define expressions
-expression : additiveExpression;
+printStmt: 'Eat.print' '(' expr ')';
 
-additiveExpression : multiplicativeExpression
-                   | additiveExpression '+' multiplicativeExpression
-                   | additiveExpression '-' multiplicativeExpression
-                   ;
+expr: term addExpr*;
 
-multiplicativeExpression : primaryExpression
-                         | multiplicativeExpression '*' primaryExpression
-                         | multiplicativeExpression '/' primaryExpression
-                         ;
+addExpr: addOp term;
 
-primaryExpression : literal
-                  | variableName
-                  | '(' expression ')'
-                  ;
+term: factor mulExpr*;
 
-// Define literals
-literal : STRING
-        | INTEGER
-        ;
+mulExpr: mulOp factor;
 
-// Define data types
-STRING : 'grain' '"' (~["\r\n] | '""')* '"';
-INTEGER : 'bowl' [0-9]+;
+factor: ID
+      | INT
+      | STRING
+      | '(' expr ')';
 
-// Define identifiers
-variableName : [a-z][a-zA-Z0-9]*;
+addOp: '+' | '-';
 
-// Define other language constructs, keywords, and operators
+mulOp: '*';
 
-// Define the print statement
-PRINT : 'Eat.print';
+serveStmt: 'Serve';
 
+ID: [a-zA-Z_][a-zA-Z0-9_]*;
+
+INT: [0-9]+;
+
+STRING: '"' (~["])* '"';

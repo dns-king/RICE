@@ -1,30 +1,43 @@
 package com.dennisking;
 
 import java.io.IOException;
-import org.antlr.v4.runtime.CharStream;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
+import org.antlr.v4.runtime.tree.ParseTree;
 
 public class Main {
 
-    private static final String EXTENSION = "rice";
-    private static final String DIRBASE = "src/test/resources/";
-
     public static void main(String[] args) throws IOException {
-        String files[] = args.length==0? new String[]{ "test." + EXTENSION } : args;
-        System.out.println("Dirbase: " + DIRBASE);
-        for (String file : files){
-            System.out.println("START: " + file);
 
-            CharStream in = CharStreams.fromFileName(DIRBASE + file);
-            RiceLexer lexer = new RiceLexer(in);
-            CommonTokenStream tokens = new CommonTokenStream(lexer);
-            RiceParser parser = new RiceParser(tokens);
-            RiceParser.StartContext tree = parser.start();
-            RiceCustomVisitor visitor = new RiceCustomVisitor();
-            visitor.visit(tree);
+        // Read Rice program from a file
+        String riceProgram = readFile("path/to/your-program.rice");
 
-            System.out.println("FINISH: " + file);
+        // Create a lexer and parser for the Rice language
+        RiceLexer lexer = new RiceLexer(CharStreams.fromString(riceProgram));
+        CommonTokenStream tokens = new CommonTokenStream(lexer);
+        RiceParser parser = new RiceParser(tokens);
+
+        // Parse the Rice program and obtain the parse tree
+        ParseTree tree = parser.riceBlock();
+
+        // Create a visitor and visit the parse tree to execute the Rice program
+        RiceCustomVisitor visitor = new RiceCustomVisitor();
+        visitor.visit(tree);
+    }
+
+    // Helper method to read the contents of a file into a string
+    private static String readFile(String filePath) {
+        try {
+            byte[] encodedBytes = Files.readAllBytes(Paths.get(filePath));
+            return new String(encodedBytes, StandardCharsets.UTF_8);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
         }
     }
+
 }
