@@ -7,24 +7,25 @@ import org.antlr.v4.runtime.CommonTokenStream;
 
 public class Main {
 
-    private static final String EXTENSION = "rice";
-    private static final String DIRBASE = "src/test/resources/";
-
     public static void main(String[] args) throws IOException {
-        String files[] = args.length==0? new String[]{ "test." + EXTENSION } : args;
-        System.out.println("Dirbase: " + DIRBASE);
-        for (String file : files){
-            System.out.println("START: " + file);
 
-            CharStream in = CharStreams.fromFileName(DIRBASE + file);
-            RiceLexer lexer = new RiceLexer(in);
-            CommonTokenStream tokens = new CommonTokenStream(lexer);
-            RiceParser parser = new RiceParser(tokens);
-            RiceParser.StartContext tree = parser.start();
-            RiceCustomVisitor visitor = new RiceCustomVisitor();
-            visitor.visit(tree);
+        try {
+            // Create an input stream of the Rice program
+            String riceProgram = "Rice { Cook { bowl num1 = 10; bowl num2 = 5; bowl result = num1 + num2; Eat.print(result); } } Serve;";
+            RiceLexer lexer = new RiceLexer(CharStreams.fromString(riceProgram));
+            RiceParser parser = new RiceParser(new CommonTokenStream(lexer));
 
-            System.out.println("FINISH: " + file);
+            // Build the parse tree
+            RiceParser.RiceProgramContext riceProgramContext = parser.riceProgram();
+
+            // Create a custom visitor
+            CustomVisitor visitor = new CustomVisitor();
+
+            // Execute the Rice program by visiting the parse tree
+            visitor.visit(riceProgramContext);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
+
 }
