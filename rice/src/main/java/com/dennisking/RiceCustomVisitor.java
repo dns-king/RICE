@@ -20,4 +20,13 @@ public class RiceCustomVisitor extends RiceBaseVisitor<Object> {
         return null;
     }
 
+    @Override
+    public Void visitCookCodeBlock(RiceParser.CookCodeBlockContext ctx) {
+        // Visit each statement in the riceCodeBlock
+        for (RiceParser.StatementContext statementContext : ctx.riceCodeBlock().statement()) {
+            visit(statementContext);
+        }
+        return null;
+    }
+
 }
