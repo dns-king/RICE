@@ -11,9 +11,45 @@ import org.antlr.v4.runtime.tree.ParseTreeVisitor;
  */
 public interface RiceVisitor<T> extends ParseTreeVisitor<T> {
 	/**
-	 * Visit a parse tree produced by {@link RiceParser#start}.
+	 * Visit a parse tree produced by {@link RiceParser#program}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitStart(RiceParser.StartContext ctx);
+	T visitProgram(RiceParser.ProgramContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link RiceParser#cookMainMethod}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitCookMainMethod(RiceParser.CookMainMethodContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link RiceParser#block}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitBlock(RiceParser.BlockContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link RiceParser#statement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitStatement(RiceParser.StatementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link RiceParser#ifStatement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitIfStatement(RiceParser.IfStatementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link RiceParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExpression(RiceParser.ExpressionContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link RiceParser#eatPrint}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitEatPrint(RiceParser.EatPrintContext ctx);
 }
