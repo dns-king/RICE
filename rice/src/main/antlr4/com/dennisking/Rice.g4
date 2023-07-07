@@ -7,13 +7,19 @@ GRAIN : '"' ~["]* '"' ;
 // Parser rules
 program : 'Rice' '{' cookMainMethod '}' ;
 
-cookMainMethod : 'Cook' 'main' '(' 'grain' '[' ']' ID ')' block ;
+cookMainMethod : 'Cook' 'main' '(' ')' block ;
 
 block : '{' statement* '}' ;
 
-statement : ifStatement ;
+statement : eatPrintStatement
+          | variableDeclaration
+          ;
 
-ifStatement : 'if' '(' expression ')' block ;
+eatPrintStatement : 'Eat' '.' 'print' '(' expression ')' ';' ;
+
+variableDeclaration : dataType ID '=' expression ';' ;
+
+dataType : 'bowl' | 'grain' ;
 
 expression : BOWL
            | GRAIN
@@ -23,10 +29,7 @@ expression : BOWL
            | expression '+' expression
            | expression '-' expression
            | '(' expression ')'
-           | eatPrint '(' expression ')' ';'
            ;
-
-eatPrint : 'Eat' '.' 'print' ;
 
 // Other rules and productions can be added as needed
 

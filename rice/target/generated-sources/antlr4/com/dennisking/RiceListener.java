@@ -48,15 +48,35 @@ public interface RiceListener extends ParseTreeListener {
 	 */
 	void exitStatement(RiceParser.StatementContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link RiceParser#ifStatement}.
+	 * Enter a parse tree produced by {@link RiceParser#eatPrintStatement}.
 	 * @param ctx the parse tree
 	 */
-	void enterIfStatement(RiceParser.IfStatementContext ctx);
+	void enterEatPrintStatement(RiceParser.EatPrintStatementContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link RiceParser#ifStatement}.
+	 * Exit a parse tree produced by {@link RiceParser#eatPrintStatement}.
 	 * @param ctx the parse tree
 	 */
-	void exitIfStatement(RiceParser.IfStatementContext ctx);
+	void exitEatPrintStatement(RiceParser.EatPrintStatementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link RiceParser#variableDeclaration}.
+	 * @param ctx the parse tree
+	 */
+	void enterVariableDeclaration(RiceParser.VariableDeclarationContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link RiceParser#variableDeclaration}.
+	 * @param ctx the parse tree
+	 */
+	void exitVariableDeclaration(RiceParser.VariableDeclarationContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link RiceParser#dataType}.
+	 * @param ctx the parse tree
+	 */
+	void enterDataType(RiceParser.DataTypeContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link RiceParser#dataType}.
+	 * @param ctx the parse tree
+	 */
+	void exitDataType(RiceParser.DataTypeContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link RiceParser#expression}.
 	 * @param ctx the parse tree
@@ -67,14 +87,4 @@ public interface RiceListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitExpression(RiceParser.ExpressionContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link RiceParser#eatPrint}.
-	 * @param ctx the parse tree
-	 */
-	void enterEatPrint(RiceParser.EatPrintContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link RiceParser#eatPrint}.
-	 * @param ctx the parse tree
-	 */
-	void exitEatPrint(RiceParser.EatPrintContext ctx);
 }

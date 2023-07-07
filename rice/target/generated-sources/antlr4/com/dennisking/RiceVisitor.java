@@ -35,21 +35,27 @@ public interface RiceVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitStatement(RiceParser.StatementContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link RiceParser#ifStatement}.
+	 * Visit a parse tree produced by {@link RiceParser#eatPrintStatement}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitIfStatement(RiceParser.IfStatementContext ctx);
+	T visitEatPrintStatement(RiceParser.EatPrintStatementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link RiceParser#variableDeclaration}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitVariableDeclaration(RiceParser.VariableDeclarationContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link RiceParser#dataType}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitDataType(RiceParser.DataTypeContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link RiceParser#expression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitExpression(RiceParser.ExpressionContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link RiceParser#eatPrint}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitEatPrint(RiceParser.EatPrintContext ctx);
 }
