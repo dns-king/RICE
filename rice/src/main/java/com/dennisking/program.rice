@@ -1,6 +1,6 @@
 Rice {
   Cook main() {
-    bowl nu
+    bowl n
     grain message = "Hello, Rice!";
     Eat.print("Congratulations on creating your first Rice app!");
   }
