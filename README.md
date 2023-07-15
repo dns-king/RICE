@@ -39,5 +39,5 @@ You can declare variables using the following syntax:
 dataType variableName = expression;
 ````
 <li><b>dataType</b> can either be <b>bowl</b> or <b>grain</b>, representing the variable's data type.
-<li><b>variableName</b> contains the entry 
+<li><b>variableName</b> contains
 <li>Write your <b>Rice code</b> inside the main block.
