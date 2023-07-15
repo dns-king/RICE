@@ -28,6 +28,6 @@ The main reason behind this idea, was that Rice should be structured in a way th
 Rice only supports two data types.
 
 <ol>
-<li></li>
+<li><b>bowl</b>: Represents integer values.</li>
 <li></li>
 </ol>
