@@ -31,3 +31,5 @@ Rice only supports two data types.
 <li><b>bowl</b>: Represents integer values.</li>
 <li><b>grain</b>: Represents string values.</li>
 </ol>
+
+## Variables
