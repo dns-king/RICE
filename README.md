@@ -33,3 +33,9 @@ Rice only supports two data types.
 </ol>
 
 ## Variables
+You can declare variables using the following syntax:
+
+````
+dataType variableName = expression;
+````
+
