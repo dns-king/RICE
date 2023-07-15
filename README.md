@@ -40,4 +40,4 @@ dataType variableName = expression;
 ````
 <li><b>dataType</b> can either be <b>bowl</b> or <b>grain</b>, representing the variable's data type.
 <li><b>variableName</b> is the name you choose for the variable.
-<li>Write your <b>expression</b> inside the main block.
+<li><b>expression</b> inside the main block.
