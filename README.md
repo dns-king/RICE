@@ -41,3 +41,37 @@ dataType variableName = expression;
 <li><b>dataType</b> can either be <b>bowl</b> or <b>grain</b>, representing the variable's data type.
 <li><b>variableName</b> is the name you choose for the variable.
 <li><b>expression</b> is the initial value assigned to the variable.
+
+## Printing to the Console
+After cooking your rice, you wanna **Eat** it right??
+
+````
+Eat.print(expression)
+````
+To print output to the console, use the **Eat.print** statement:
+<li><b>expression</b> can be a variable or a string literal. 
+
+## Arithemetic Expressions
+Haha, probably gonna get some slack for this one, Rice does **NOT** support basic arithmetic expressions.
+
+<li><b>Addition</b>: nope!!
+<li><b>Subtraction</b>: no ma'am!!
+<li><b>Multiplication</b>: haha, funny.
+<li><b>Divsion</b>: I'm in divsion 1 on Fifa online!!
+
+Arithmetic expressions can be written using the following syntax:
+
+````
+bowl result = expression1 operator expression2;
+````
+
+<li><b>expression1</b> and <b>expression2</b> can be variables or numeric values.
+<li><b>operator</b> represents the desired arithmetic operation.
+  
+#### trust me, this will not give you the desired result!
+
+## Why Rice does not support this feature
+<li><b>Simplicity</b>: The decision to omit complex arithmetic expressions is so that Rice can focus on teaching fundamental programming concepts and logic without overwhelming beginners. I'm hoping that young users will be able to grasp the basics of programming without the added complexity of arithmetic calculations.
+<li><b>Understanding</b>: Prioritizing simplicity, Rice encourages users to think in terms of logical operations and problem-solving rather than becoming overly reliant on arithmetic calculations. It should promote a deeper understanding of programming concepts beyond simple arithmetic manipulation.
+<li><b>Early Age Accessability</b>: By making Rice accessible to children as young as 5, I'm hoping to foster an early interest in programming. This could have long-term benefits in terms of developing computational thinking, problem-solving skills, and creativity from an early age.
+<li><b>Gradual Learning Progression</b>: Rice will serve as an excellent stepping stone for young learners to transition to more advanced languages and concepts later on. Once they have a solid foundation in Rice's simplified syntax and logic, they can easily adapt to languages that support arithmetic expressions.
