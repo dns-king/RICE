@@ -8,6 +8,8 @@ Just give me a **Bowl** of rice and I'm happy.
 # Rice
 Rice is a simple and lightweight programming language designed for basic operations, string manipulation, and console output. It aims to provide an intuitive and readable syntax similar to Java while offering a reduced set of features. The **main** goal for Rice is for it to become the standard programming language that beginner devs or anyone that is interested in coding start learning. Rice should be the "intro to software development" language. I want this to be case because of Rice's very basic program structure that is sooooo incredibly easy to understand, in fact kids as young as 5 can even use it, let's teach kids how to program guys? we can do that with Rice... my goodness, Rice is so simple!!
 
+# Installation
+
 # Syntax
 Rice programs follow a structure similar to Java:
 
@@ -75,3 +77,18 @@ bowl result = expression1 operator expression2;
 <li><b>Understanding</b>: Prioritizing simplicity, Rice encourages users to think in terms of logical operations and problem-solving rather than becoming overly reliant on arithmetic calculations. It should promote a deeper understanding of programming concepts beyond simple arithmetic manipulation.
 <li><b>Early Age Accessability</b>: By making Rice accessible to children as young as 5, I'm hoping to foster an early interest in programming. This could have long-term benefits in terms of developing computational thinking, problem-solving skills, and creativity from an early age.
 <li><b>Gradual Learning Progression</b>: Rice will serve as an excellent stepping stone for young learners to transition to more advanced languages and concepts later on. Once they have a solid foundation in Rice's simplified syntax and logic, they can easily adapt to languages that support arithmetic expressions.
+
+## Example Rice Program
+Here's an example of a Rice program.
+
+````
+Rice{
+  Cook main(){
+    grain compliment = "David Guetta's Sunshine is easily one of his greatest hits!!";
+    bowl year = 2012;
+    Eat.print(message);
+    Eat.print(year);
+  }
+}
+````
+This code needs to be saved in a **.rice** file
