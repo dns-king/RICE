@@ -118,9 +118,7 @@ The relationship between Rice, ANTLR, and Java can be explained through the foll
 <li><b>ANTLR Code Generation:</b> After I defined the grammar, ANTLR generates lexer and parser code in Java based on Rice's grammar specification.
 <li><b>Parsing process:</b> When a program written in Rice is executed, the ANTLR-generated lexer reads the source code and converts it into a stream of tokens. These tokens represent the basic building blocks of your language, such as keywords, identifiers, literals, and operators.
 <li><b>Building the Parse Tree:</b> The generated parser then takes the stream of tokens and constructs a parse tree based on the grammar rules. The parse tree represents the syntactic structure of the code, capturing how different language constructs are related to each other.
-<li><b>Translation to Java:</b> Once the parse tree is constructed, you can implement a custom Java code generator (or use ANTLR's built-in capabilities) that traverses the parse tree and generates equivalent Java code. This translation step ensures that the code written in your custom language can be executed as Java code.
+<li><b>Translation to Java:</b> Once the parse tree is constructed, you can implement a custom Java code generator (or use ANTLR's built-in capabilities) that traverses the parse tree and generates equivalent Java code. This translation step ensures that the code written in Rice can be executed as Java code.
 
-
-<li><b>Grammar Definition:</b> Defined the grammar for Rice using ANTLR. This grammar serves as a blueprint for how the language's code should be structured.
 
 
