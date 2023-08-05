@@ -125,4 +125,25 @@ After the code has been translated to Java, it is treated as regular Java code a
 So, Rice relies on ANTLR to define its grammar and generate the necessary lexer and parser code in Java. The parsed code is then translated into equivalent Java code, which can be executed using the Java Virtual Machine. This relationship has allowed me to create Rice while leveraging the flexibility and robustness of Java.
 
 # How to execute a Rice program
+As I mentioned before, Rice relies on JAVA, so to execute a Rice program you will need to have JAVA installed.
+
+````
+Rice{
+  Cook main(){
+  grain complain = "ahh man writing the documentation for this is taking too long!";
+  bowl age = 23;
+  Eat.print("I wonder where my birth certificate is.");
+  }
+}
+````
+
+One unique aspect about Rice is that it runs in its own file, so you don't have to write Rice code in some main java class file. The code above will be executed in its own file with an extension of `.rice`. All you have to do to run a Rice program is to switch to the main java class file and hit <b>run!!</b>
+
+The program above will print the following output to the console:
+
+`Variable declaration: "ahh man writing the documentation for this is taking too long!"`
+`Variable declaration: 23`
+`Variable declaration: "ahh man writing the documentation for this is taking too long!"`
+
+
 
