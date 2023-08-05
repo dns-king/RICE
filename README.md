@@ -141,11 +141,11 @@ One unique aspect about Rice is that it runs in its own file, so you don't have 
 
 The program above will print the following output to the console:
 
-`Variable declaration: "ahh man writing the documentation for this is taking too long!"`
+`Variable declaration: complain = "ahh man writing the documentation for this is taking too long!"`
 
-`Variable declaration: 23`
+`Variable declaration: age = 23`
 
-`Variable declaration: "ahh man writing the documentation for this is taking too long!"`
+`Printing: "I wonder where my birth certificate is."`
 
 
 

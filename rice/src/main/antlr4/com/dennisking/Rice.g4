@@ -31,7 +31,6 @@ expression : BOWL
            | '(' expression ')'
            ;
 
-// Other rules and productions can be added as needed
 
 // Lexer rules
 fragment DIGIT : [0-9] ;

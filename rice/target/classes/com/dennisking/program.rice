@@ -1,7 +1,5 @@
 Rice {
   Cook main() {
-    bowl number = 12345689;
-    grain letters = "abcdefghijklmnopqrstuvwxyz";
-    Eat.print(letters);
+    grain message = "congratulations on creating your first Rice program!";
   }
 }
