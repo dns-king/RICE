@@ -99,14 +99,14 @@ Rice{
   }
 }
 ````
-# How to execute a Rice program
+# How it works
 
 Technically Rice is not its own unique programming language, it was created using ANTLR and JAVA and so it's heavily reliant on them.
 
 ### But frst, let me explain the relationship between them.
 
-#### ANTLR (ANOTHER TOOL FOR LANGUAGE RECOGNITION)
-ANTLR is a powerful parser generator that allows you to define the grammar of your custom programming language(Rice). It takes your language's grammar specification as input and generates lexer and parser code in various programming languages, including Java. The generated lexer and parser are responsible for transforming your source code into a parse tree, which represents the hierarchical structure of the code.
+#### ANTLR (Another tool for language recognition)
+ANTLR is a powerful parser generator that allowed me to define the grammar for Rice. It takes Rice's grammar specification as input and generates lexer and parser code in various programming languages, including Java. The generated lexer and parser are responsible for transforming the source code into a parse tree, which represents the hierarchical structure of the code.
 #### Rice the programming language
 The language I created using ANTLR is a custom programming language. Although it's not entirely new because it relies on existing components (ANTLR and Java) to function. However, it does have its unique syntax, semantics, and features. Rice's grammar, which defines its syntax, is specified in ANTLR's grammar file format. The grammar file contains rules that describe how the language's statements, expressions, and other constructs should be structured.
 #### JAVA
@@ -119,6 +119,10 @@ The relationship between Rice, ANTLR, and Java can be explained through the foll
 <li><b>Parsing process:</b> When a program written in Rice is executed, the ANTLR-generated lexer reads the source code and converts it into a stream of tokens. These tokens represent the basic building blocks of your language, such as keywords, identifiers, literals, and operators.
 <li><b>Building the Parse Tree:</b> The generated parser then takes the stream of tokens and constructs a parse tree based on the grammar rules. The parse tree represents the syntactic structure of the code, capturing how different language constructs are related to each other.
 <li><b>Translation to Java:</b> Once the parse tree is constructed, you can implement a custom Java code generator (or use ANTLR's built-in capabilities) that traverses the parse tree and generates equivalent Java code. This translation step ensures that the code written in Rice can be executed as Java code.
+<li><b>Execution:</b>
+After the code has been translated to Java, it is treated as regular Java code and can be executed by the Java Virtual Machine (JVM). The execution flow follows standard Java practices, allowing Rice to leverage the power of Java's runtime environment.
 
+So, Rice relies on ANTLR to define its grammar and generate the necessary lexer and parser code in Java. The parsed code is then translated into equivalent Java code, which can be executed using the Java Virtual Machine. This relationship has allowed me to create Rice while leveraging the flexibility and robustness of Java.
 
+# How to execute a Rice program
 
