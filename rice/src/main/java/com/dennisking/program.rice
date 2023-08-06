@@ -1,0 +1,5 @@
+Rice {
+  Cook main() {
+    grain message = "congratulations on creating your first Rice program!";
+  }
+}
