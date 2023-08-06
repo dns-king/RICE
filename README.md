@@ -76,8 +76,8 @@ bowl result = expression1 operator expression2;
 #### trust me, this will not give you the desired result!
 
 ## Why Rice does not support this feature
-<li><b>Simplicity</b>: The decision to omit complex arithmetic expressions is so that Rice can focus on teaching fundamental programming concepts and logic without overwhelming beginners. I'm hoping that young users will be able to grasp the basics of programming without the added complexity of arithmetic calculations.
-<li><b>Understanding</b>: Prioritizing simplicity, Rice encourages users to think in terms of logical operations and problem-solving rather than becoming overly reliant on arithmetic calculations. It should promote a deeper understanding of programming concepts beyond simple arithmetic manipulation.
+<li><b>Simplicity</b>: The decision to omit complex arithmetic expressions is so that Rice can focus on teaching fundamental programming concepts and logic without overwhelming beginners(kids). I'm hoping that young users will be able to grasp the basics of programming without the added complexity of arithmetic calculations.
+<li><b>Understanding</b>: Prioritizing simplicity, Rice encourages users to think in terms of problem-solving rather than becoming overly reliant on arithmetic calculations. It should promote a deeper understanding of programming concepts beyond simple arithmetic manipulation.
 
 ## More unsupported features
 <li> Conditional statements, <b>if, else, switch. 😫</b>
@@ -95,7 +95,7 @@ Rice{
   Cook main(){
     grain message = "David Guetta's Sunshine is easily one of his greatest hits!!";
     bowl year = 2012;
-    Eat.print("thank you for your continued support!");
+    Eat.print("What a great track!!");
   }
 }
 ````
@@ -108,7 +108,7 @@ Technically Rice is not its own unique programming language, it was created usin
 #### ANTLR (Another tool for language recognition)
 ANTLR is a powerful parser generator that allowed me to define the grammar for Rice. It takes Rice's grammar specification as input and generates lexer and parser code in various programming languages, including Java. The generated lexer and parser are responsible for transforming the source code into a parse tree, which represents the hierarchical structure of the code.
 #### Rice the programming language
-The language I created using ANTLR is a custom programming language. Although it's not entirely new because it relies on existing components (ANTLR and Java) to function. However, it does have its unique syntax, semantics, and features. Rice's grammar, which defines its syntax, is specified in ANTLR's grammar file format. The grammar file contains rules that describe how the language's statements, expressions, and other constructs should be structured.
+The language I created using ANTLR is a custom programming language. Although, it's not entirely new because it relies on existing components (ANTLR and Java) to function. However, it does have its unique syntax, semantics, and features. Rice's grammar, which defines its syntax, is specified in ANTLR's grammar file format. The grammar file contains rules that describe how the language's statements, expressions, and other constructs should be structured.
 #### JAVA
 Java is a general-purpose programming language that I chose as the target language for Rice. This means that the code written in Rice will ultimately be translated into equivalent Java code through the process of parsing and translation.
 
@@ -137,7 +137,7 @@ Rice{
 }
 ````
 
-One unique aspect about Rice is that it runs in its own file, so you don't have to write Rice code in some main java class file. The code above will be executed in its own file with an extension of `.rice`. All you have to do to run a Rice program is to switch to the main java class file and hit <b>run!!</b>
+One unique aspect about Rice is that it's written in its own file, so you don't have to write Rice code in some main java class file. The code above will be executed in its own file with an extension of `.rice`. All you have to do to run a Rice program is to switch to the main java class file and hit <b>run!!</b>
 
 The program above will print the following output to the console:
 
@@ -146,6 +146,13 @@ The program above will print the following output to the console:
 `Variable declaration: age = 23`
 
 `Printing: "I wonder where my birth certificate is."`
+
+I hope up to this point everything makes sense.
+
+# Conclusion
+Help me make Rice an official and a recognised programming language.
+
+Dennis King.
 
 
 
