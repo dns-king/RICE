@@ -86,19 +86,19 @@ public class RiceCustomVisitor extends RiceBaseVisitor<Object> {
         return null;
     }
 
-    @Override
-    public Void visitExpression(RiceParser.ExpressionContext ctx) {
-        // Get the left and right expressions, and the operator
-        ParseTree leftExpr = ctx.expression(0);
-        ParseTree rightExpr = ctx.expression(1);
-        String operator = ctx.getChild(1).getText();
+    // @Override
+    // public Void visitExpression(RiceParser.ExpressionContext ctx) {
+    //     // Get the left and right expressions, and the operator
+    //     ParseTree leftExpr = ctx.expression(0);
+    //     ParseTree rightExpr = ctx.expression(1);
+    //     String operator = ctx.getChild(1).getText();
 
-        // Perform actions for the arithmetic expression
-        System.out.println("Arithmetic expression: " + leftExpr.getText() + " " +
-                operator + " " + rightExpr.getText());
+    //     // Perform actions for the arithmetic expression
+    //     System.out.println("Arithmetic expression: " + leftExpr.getText() + " " +
+    //             operator + " " + rightExpr.getText());
 
-        return null;
-    }
+    //     return null;
+    // }
 
     // Override visitTerminal for specific terminal nodes
     @Override
