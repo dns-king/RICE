@@ -31,8 +31,6 @@ expression : BOWL
            | '(' expression ')'
            ;
 
-
-// Lexer rules
 fragment DIGIT : [0-9] ;
 ID : [a-zA-Z]+ ;
 WS : [ \t\r\n]+ -> skip ;
