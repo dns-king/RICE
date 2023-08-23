@@ -5,7 +5,7 @@ int main() {
     llvm::LLVMContext context;
     llvm::Module module("my_module", context);
 
-    // Generate LLVM IR for Rice language
+    //create LLVM IR for Rice
 
     module.dump();  // Dump the generated LLVM IR
 
