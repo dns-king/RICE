@@ -1,0 +1,1 @@
+/usr/bin/clang++ -g "CMakeFiles/rice-compiler.dir/main.cpp.o" -o rice-compiler  /usr/lib/llvm-10/lib/libLLVM-10.so.1 

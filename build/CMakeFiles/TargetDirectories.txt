@@ -1,0 +1,4 @@
+/workspaces/RICE/build/CMakeFiles/intrinsics_gen.dir
+/workspaces/RICE/build/CMakeFiles/rice-compiler.dir
+/workspaces/RICE/build/CMakeFiles/edit_cache.dir
+/workspaces/RICE/build/CMakeFiles/rebuild_cache.dir

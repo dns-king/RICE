@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/workspaces/RICE/build",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-10/include -g -std=gnu++17   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -o CMakeFiles/rice-compiler.dir/main.cpp.o -c /workspaces/RICE/main.cpp",
+  "file": "/workspaces/RICE/main.cpp",
+  "output": "CMakeFiles/rice-compiler.dir/main.cpp.o"
+}
+]
