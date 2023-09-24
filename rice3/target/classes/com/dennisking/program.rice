@@ -1,0 +1,6 @@
+
+rice {
+    cook;
+    serve 20 with 30 and 10;
+    eat print "okay, great stuff Dennis!!";
+}

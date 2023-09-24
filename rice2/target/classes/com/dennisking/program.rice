@@ -1,0 +1,14 @@
+Rice {
+    Cook main() {
+        // Variable declaration
+        bowl num1 = 10;
+        bowl num2 = 20;
+
+        // Arithmetic expression
+        bowl result = num1 + num2;
+
+        // Print the result
+        Eat.print(result);
+        Eat.print("I love you!");
+    }
+}
