@@ -103,7 +103,7 @@ Rice{
 
 Technically Rice is not its own unique programming language, it was created using ANTLR and JAVA and so it's heavily reliant on them.
 
-### But frst, let me explain the relationship between them.
+### But first, let me explain the relationship between them.
 
 #### ANTLR (Another tool for language recognition)
 ANTLR is a powerful parser generator that allowed me to define the grammar for Rice. It takes Rice's grammar specification as input and generates lexer and parser code in various programming languages, including Java. The generated lexer and parser are responsible for transforming the source code into a parse tree, which represents the hierarchical structure of the code.
